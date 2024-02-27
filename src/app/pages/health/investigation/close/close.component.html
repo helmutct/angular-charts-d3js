@@ -1,0 +1,30 @@
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header state modal-primary">                                    
+            <h4 class="modal-title" id="modal-primary-label"><i class="fa fa-flag"></i>Encerrar investigação</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body">
+            <div class="checkbox checbox-switch switch-primary text-left">
+                <label>
+                    <input type="checkbox" id="noCrime" name="" checked="" [checked]="noCrime"
+                        (change)="noCrime = !noCrime">
+                    <span></span>
+                    <div *ngIf="!noCrime" style="display: inline;color: red;">Fraude</div>
+                    <div *ngIf="noCrime" style="display: inline;">Não fraude</div>
+                </label>
+            </div>
+            <select *ngIf="!noCrime" class="custom-select">
+                <option selected>Selecione o objeto da fraude</option>
+                <option value="1">Exame</option>
+                <option value="2">Medicamento</option>
+                <option value="3">Internação</option>
+                <option value="4">Prótese</option>
+            </select>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Encerrar</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        </div>
+    </div>
+</div>

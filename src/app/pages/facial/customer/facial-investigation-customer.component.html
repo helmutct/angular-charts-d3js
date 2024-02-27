@@ -1,0 +1,52 @@
+<div [@routerTransition]>
+    <div class="container" id="facial-customer">
+        <div class="row">
+            <div class="col">
+                <div widget class="card">
+                    <div class="card-header text-center">
+                        <h4>Beneficiário</h4>
+                    </div>
+                    <div class="card-body widget-body">
+                        <div class="row text-center justify-content-center">
+                            <div class="col-12">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="col-12">
+                                <div class="container">
+                                    <div class="row pb-2 justify-content-center">
+                                        <div class="col-6">
+                                            <input id="provider-name" placeholder="Numero do beneficiário..."
+                                                type="text" class="form-control" maxlength="18" required
+                                                (ngModelChange)="search($event)" [(ngModel)]="value"
+                                                name="providerNumber" />
+                                            <span id="not-found" *ngIf="error" class="help-block text-danger"><i
+                                                    class="fas fa-exclamation-triangle"></i> Beneficiário não encontrado
+                                                !</span>
+                                            <span id="not-found" *ngIf="notYeat" class="help-block text-danger"><i
+                                                    class="fas fa-running"></i> Numero Beneficiário precita ter 18
+                                                caracteres !</span>
+                                            <span id="not-found" *ngIf="overflow" class="help-block text-danger"><i
+                                                    class="far fa-angry"></i>Ei , voce bugou o sistema! Pode
+                                                parar!</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 text-center pt-2 pb-2" *ngIf="denied" id="denie-div">
+                                <h5>Procedimento não autorizado!</h5>
+                                <h6>Entre em contato na nossa central de relacionamentos com ao cliente para liberar
+                                    este procedimento, ou aguarde a liberação por um de nossos analistas.</h6>
+                                <h6>Posição na fila: 150 </h6>
+                                <h5>Tempo medio de espera: 15 minutos</h5>
+                                <span>SAC: 0800 1010 2514 </span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

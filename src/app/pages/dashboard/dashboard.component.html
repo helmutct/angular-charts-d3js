@@ -1,0 +1,42 @@
+<div [@routerTransition]>
+    <div class="container" id="dashboard">
+        <div class="row">
+            <div class="col-6">
+                <div class="card small-info-box">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="fas fa-chart-pie"></i>
+                        </span>
+                        <div class="media-body text-right">
+                            <h6 class="media-heading no-margin">PERCENTUAL DO FATURAMENTO PERDIDO COM FRAUDES (NOS
+                                ÚLTIMOS 12 MESES)</h6>
+                            <span>22.4%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card small-info-box">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="fa fa-users"></i>
+                        </span>
+                        <div class="media-body text-right">
+                            <h6 class="media-heading no-margin">NÚMERO DE CREDENCIADOS ENVOLVIDOS EM FRAUDE (NOS
+                                ÚLTIMOS 12 MESES)</h6>
+                            <span>1.347</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-lg-6 col-sm-12 bottom-30">
+                <zr-most-suspicious-providers class="chart"></zr-most-suspicious-providers>
+            </div>
+            <div class="col-lg-6 col-sm-12 bottom-30">
+                <zr-most-common-scams class="chart"></zr-most-common-scams>
+            </div>
+        </div>
+    </div>
+</div>

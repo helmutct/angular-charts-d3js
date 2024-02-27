@@ -1,0 +1,30 @@
+@import "../../common/styles/variables";
+@import "../../common/styles/mixins";
+
+#facial{
+    a:hover {
+        color: $main-color;
+    }
+    .dropdown{
+        button{
+            background: $info-color;
+            color: $default-color;
+        }
+        button:hover{
+            font-style: bold;
+            text-decoration: underline;
+
+        }
+        
+    }
+    #executar{
+        text-decoration: underline;
+    }
+    .card-footer a{
+        color: $default-color;
+    }
+    .card-footer a:hover{
+        text-decoration: underline;
+    }
+    
+}

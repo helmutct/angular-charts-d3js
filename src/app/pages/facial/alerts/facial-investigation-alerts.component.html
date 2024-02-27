@@ -1,0 +1,71 @@
+<div [@routerTransition]>
+    <div class="container" id="facial-alerts-view-customer">
+        <div class="row">
+            <div class="col-md-4 col-xl-3 col-lg-3 col-sm-6">
+                <div>
+                    <img alt="" class="mx-auto d-block logo bottom-15" src="{{fotoOriginal}}">
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12">
+                <h2>{{nome}}</h2>
+                <div><span class="font-weight-bold">CPF: </span>{{cpf}}</div>
+                <div><span class="font-weight-bold">Número Benefício: </span>{{numeroBeneficio}}</div>
+                <div><span class="font-weight-bold">Nome mãe: </span>{{nomeMae}}</div>
+                <div><span class="font-weight-bold">Nome pai: </span>{{nomePai}}</div>
+                <div><span class="font-weight-bold">Data Nascimento: </span>{{dataNascimento}}</div>
+                <div><span class="font-weight-bold">Cidade natal: </span>{{cidadeNatal}}</div>
+                <div><span class="font-weight-bold">Endereço: </span>{{endereco}}</div>
+                <div><span class="font-weight-bold">CEP: </span>{{cep}}</div>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <table class="table table-hover table-investigation">
+                <thead>
+                    <tr>
+                        <th class="text-center">Alerta</th>
+                        <th>Tipo atendimento</th>
+                        <th>Horario atendimento</th>
+                        <th>Executante</th>
+                        <th>Similaridade</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="background-red font-weight-bold text-center radius-cirlce"><span
+                                class="color-white ">{{choices[0].alerta}}</span></td>
+                        <td>{{choices[0].tipoAtendimento}}</td>
+                        <td class="text-left">{{choices[0].horarioAtendimento}}</td>
+                        <td>{{choices[0].executante}}</td>
+                        <td class="color-red ">{{choices[0].similaridade}}</td>
+                        <td>
+                            <a href="/facial/analises/alertas/analisar?={{pId}}">
+                                <i class="fas fa-search btn-search"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="background-green font-weight-bold text-center radius-cirlce"><span
+                                class="color-white ">{{choices[1].alerta}}</span></td>
+                        <td>{{choices[1].tipoAtendimento}}</td>
+                        <td class="text-left">{{choices[1].horarioAtendimento}}</td>
+                        <td>{{choices[1].executante}}</td>
+                        <td >{{choices[1].similaridade}}</td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="background-green font-weight-bold text-center radius-cirlce"><span
+                                class="color-white ">{{choices[2].alerta}}</span></td>
+                        <td>{{choices[2].tipoAtendimento}}</td>
+                        <td class="text-left">{{choices[2].horarioAtendimento}}</td>
+                        <td>{{choices[2].executante}}</td>
+                        <td >{{choices[2].similaridade}}</td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

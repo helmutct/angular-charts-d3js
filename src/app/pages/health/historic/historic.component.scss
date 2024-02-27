@@ -1,0 +1,15 @@
+@import "../../../common/styles/variables";
+
+.table-investigation {
+    width: 100%;
+    thead {
+        width: 100%;
+    }
+    tbody {
+        width: 100%;
+    }
+    .btn-search{
+        color: $main-color;
+        font-size: 13px;
+    }
+}

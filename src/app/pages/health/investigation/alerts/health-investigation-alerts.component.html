@@ -1,0 +1,189 @@
+<div [@routerTransition]>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h2>dr. Roberto Alves</h2>
+            </div>
+            <div class="col-6 text-right">
+                <button type="button" class="btn btn-main" data-toggle="modal" data-target="#finish-modal">
+                    <i class="fas fa-flag"></i> Encerrar investigação
+                </button>
+                <div class="modal fade" id="finish-modal" tabindex="-1" role="dialog" aria-labelledby="modal-primary-label">
+                    <zr-investigation-close></zr-investigation-close>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <span class="font-weight-bold">Procedimento: </span>00098289
+            </div>
+            <div class="col-6">
+                <span class="font-weight-bold">Valor: </span>R$134.743,00
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-6">
+                <span class="font-weight-bold">Data de envio da guia: </span>29/05/2018
+            </div>
+            <div class="col-6">
+                <span class="font-weight-bold">Pontuação de risco: </span><span class="color-red">886 (alto)</span>
+            </div>
+            <div class="col-12 pt-3">
+                <a routerLink="/saude/investigacoes/dados">
+                    Ver mais detalhes
+                </a>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <h3>> Alertas de suspeição de fraude</h3>
+            <div class="table-responsive">
+                <div class="container-fluid list-alerts">
+                    <div class="row border-bottom border-top align-items-center h-100 item-alert-header">
+                        <div class="col-1"></div>
+                        <div class="col-8 font-weight-bold">
+                            Alerta
+                        </div>
+                        <div class="col-1 text-center font-weight-bold">
+                            Risco
+                        </div>
+                        <div class="col-2 text-center font-weight-bold">
+                            Gravidade
+                        </div>
+                    </div>
+                    <div class="row border-bottom border-top align-items-center h-100 item-alert collapsed" data-toggle="collapse"
+                        data-target="#group-of-rows-1" aria-expanded="false" aria-controls="group-of-rows-1" (click)="onShowAlert(1)">
+                        <div class="col-1">
+                            <i [className]="showAlert[1]? 'far fa-minus-square': 'far fa-plus-square'" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-8">
+                            Anomalias detectadas para este procedimento
+                        </div>
+                        <div class="col-1 text-center">
+                            1
+                        </div>
+                        <div class="col-2 background-red font-weight-bold text-center">
+                            413
+                        </div>
+                    </div>
+                    <div id="group-of-rows-1" class="collapse">
+                        <zr-stacked-horizontal-bar></zr-stacked-horizontal-bar>
+                    </div>
+                    <div class="row border-bottom border-top align-items-center h-100 item-alert collapsed" data-toggle="collapse"
+                        data-target="#group-of-rows-2" aria-expanded="false" aria-controls="group-of-rows-2" (click)="onShowAlert(2)">
+                        <div class="col-1">
+                            <i [className]="showAlert[2]? 'far fa-minus-square': 'far fa-plus-square'" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-8">
+                            Sujeitos envolvidos em fraudes estão neste procedimento
+                        </div>
+                        <div class="col-1 text-center">
+                            2
+                        </div>
+                        <div class="col-2 background-orange font-weight-bold text-center">
+                            316
+                        </div>
+                    </div>
+                    <div id="group-of-rows-2" class="collapse">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-3">
+                                <div class="card small-info-box">
+                                    <div class="media">
+                                        <span class="media-left">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                        <div class="media-body text-right">
+                                            <h6 class="media-heading no-margin">Nº de fraudes em que a localização Cliníca Brasil esteve envolvida:</h6>
+                                            <span>3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-3">
+                                <div class="card small-info-box">
+                                    <div class="media">
+                                        <span class="media-left">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                        <div class="media-body text-right">
+                                            <h6 class="media-heading no-margin">Nº de fraudes em que a médico Dr. Faria Lima esteve envolvido:</h6>
+                                            <span>8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-3">
+                                <div class="card small-info-box">
+                                    <div class="media">
+                                        <span class="media-left">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                        <div class="media-body text-right">
+                                            <h6 class="media-heading no-margin">Nº de fraudes em que o advogado Harvey Specter esteve envolvido:</h6>
+                                            <span>9</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-3">
+                                <div class="card small-info-box">
+                                    <div class="media">
+                                        <span class="media-left">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                        <div class="media-body text-right">
+                                            <h6 class="media-heading no-margin">Nº de fraudes em que o advogado Phoenix Wright esteve envolvido:</h6>
+                                            <span>11</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <zr-neo4jd3 [options]="alertFraudSharedLocationOptions" style="width: 100%;" height="300"></zr-neo4jd3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row border-bottom border-top align-items-center h-100 item-alert collapsed" data-toggle="collapse"
+                        data-target="#group-of-rows-3" aria-expanded="false" aria-controls="group-of-rows-3" (click)="onShowAlert(3)">
+                        <div class="col-1">
+                            <i [className]="showAlert[3]? 'far fa-minus-square': 'far fa-plus-square'" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-8">
+                            Ação recorrente com aumento gradativo do valor
+                        </div>
+                        <div class="col-1 text-center">
+                            4
+                        </div>
+                        <div class="col-2 background-green font-weight-bold text-center">
+                            112
+                        </div>
+                    </div>
+                    <div id="group-of-rows-3" class="collapse">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card small-info-box">
+                                    <div class="media">
+                                        <span class="media-left">
+                                            <i class="fas fa-chart-line"></i>
+                                        </span>
+                                        <div class="media-body text-right">
+                                            <h6 class="media-heading no-margin">O médico dr. Roberto Alves prescreveu o Avastin 25 vezes, e houve crescimento gradativo no valor das contas hospitalres nestas prescrições</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <zr-bubble-chart [data]="gradativeIncreasedScam" [xAxisLabel]="''" [yAxisLabel]="'Valor acumulado'" height="600"></zr-bubble-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <h3>> Quadro de suspeitos</h3>
+        </div>
+        <div class="row pt-5">
+            <zr-neo4jd3 [options]="suspectBoardOptions" style="width: 100%;" height="500"></zr-neo4jd3>
+        </div>
+    </div>
+</div>

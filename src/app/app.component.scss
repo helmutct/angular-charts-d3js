@@ -1,0 +1,23 @@
+@import "common/styles/variables";
+@import "common/styles/mixins";
+
+@import "../../node_modules/pace/themes/pace-theme-flash";
+
+@import "common/styles/bootstrap-override";
+@import "common/styles/libs-override";
+@import "common/styles/base";
+
+.background-red {
+    background-color: red;
+}
+
+.background-orange {
+    background-color: orange;
+}
+
+.background-green {
+    background-color: green;
+}
+.text-white{
+    color:white !important;
+}

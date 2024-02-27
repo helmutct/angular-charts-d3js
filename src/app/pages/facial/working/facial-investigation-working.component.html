@@ -1,0 +1,106 @@
+<div [@routerTransition]>
+    <div class="container" id="facial-alerts-list">
+        <div class="row">
+            <div class="col">
+                <div widget class="card">
+                    <div class="card-header text-center">
+                        <h4>Analises</h4>
+                    </div>
+                    <div class="card-body widget-body">
+                        <form (ngSubmit)="search()">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="container">
+                                        <div class="row pb-2">
+                                            <div class="col-6">
+                                                <input id="input-name" type="month" class="form-control"
+                                                    maxlength="8" required [ngModel]="month"
+                                                    (ngModelChange)="month = $event" name="month"
+                                                    #subscriptionMonth="ngModel" />
+                                            </div>
+                                            <div class="col-6">
+                                                <input id="provider-name"
+                                                    placeholder="Pesquisar número ou CPF do benefício..." type="text"
+                                                    class="form-control" maxlength="50" required
+                                                    [ngModel]="providerName" (ngModelChange)="providerName = $event"
+                                                    name="providerName" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <label>Situação:</label>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="rdAllApps" [value]="-1" name="appId"
+                                                        class="custom-control-input radio-main" [(ngModel)]="appId">
+                                                    <label class="custom-control-label" for="rdAllApps">Todos</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="rdAceite" [value]="1" name="appId"
+                                                        class="custom-control-input radio-main" [(ngModel)]="appId">
+                                                    <label class="custom-control-label" for="rdAceite">Pendente</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="rdInterconexao" [value]="0" name="appId"
+                                                        class="custom-control-input radio-main" [(ngModel)]="appId">
+                                                    <label class="custom-control-label"
+                                                        for="rdInterconexao">Concluido</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row pb-2 text-right">
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-main">
+                                                    <i class="fas fa-search"></i> Filtrar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row">
+                            <table class="table table-hover table-investigation">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Similaridade</th>
+                                        <th>Tipo</th>
+                                        <th>Beneficiário</th>
+                                        <th>Número Benefício</th>
+                                        <th>Executante</th>
+                                        <th>Hórario atendimento</th>
+                                        <th>Situação</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of data">
+                                        <td
+                                            class="background-red font-weight-bold text-center color-white align-middle">
+                                            {{data.series[0].value}}</td>
+                                        <td class="text-center">{{data.series[1].value}}</td>
+                                        <td><a routerLink="/facial/analises/alertas">{{data.series[2].value}}</a></td>
+                                        <td>{{data.series[3].value}}</td>
+                                        <td>{{data.series[4].value}}</td>
+                                        <td>{{data.series[5].value}}</td>
+                                        <td>{{data.series[6].value}}</td>
+                                        <td>
+                                            <a href="{{data.series[7].value}}">
+                                                <i class="fas fa-search btn-search"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+@import "../../../common/styles/variables";
+
+.table-investigation {
+    .color-white {
+        color:$default-color;
+        font-weight: bold;
+        border-radius: 2rem;
+    }
+    width: 100%;
+    thead {
+        width: 100%;
+    }
+    tbody {
+        width: 100%;
+        .btn-search{
+            color: $main-color;
+            font-size: 13px;
+        }
+    }
+    tbody tr:hover {
+        background-color: $info-color;
+        color:$default-color;
+        .btn-search{
+            color:$default-color;
+        }
+        .color-white {
+            text-decoration: overline;
+            border-radius: 0rem;
+        }
+        a{
+            color: $default-color;
+        }
+    }
+    .btn-search:hover {
+        color:$default-color;
+    }
+}
+

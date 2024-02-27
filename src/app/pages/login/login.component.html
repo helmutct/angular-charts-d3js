@@ -1,0 +1,27 @@
+<div class="login-container">
+    <div class="col-xl-4 col-md-6 col-10 mx-auto">
+        <div class="card">
+            <div class="card-body text-center">
+                <img alt="" class="mx-auto d-block logo bottom-15" src="assets/img/logo/zr-logo-blue.png">
+
+                <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class=" text-left">
+                    <div class="form-group">
+                        <input [formControl]="email" class="form-control checking-field" placeholder="Email" type="text">                      
+                        <span class="help-block text-danger" *ngIf="form.get('email').touched && form.get('email').hasError('required')">Email obrigatório</span>                              
+                        <span class="help-block text-danger" *ngIf="form.get('email').touched && form.get('email').hasError('invalidEmail')">Endereço de email inválido</span>
+                    </div>
+                    <div class="form-group">
+                        <input [formControl]="password" class="form-control checking-field" placeholder="Senha" type="password">
+                        <span class="help-block text-danger" *ngIf="form.get('password').touched && form.get('password').hasError('required')">Senha obrigatória</span>                              
+                        <span class="help-block text-danger" *ngIf="form.get('password').touched && form.get('password').hasError('minlength')">Senha não é longa o suficiente, mínimo de 5 caracteres</span>
+                    </div>
+                    <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+                    <div class="form-group">
+                        <button [disabled]="!form.valid || formSubmitted" class="btn btn-main btn-block" type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

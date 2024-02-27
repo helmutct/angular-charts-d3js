@@ -1,0 +1,89 @@
+{
+    "results": [{
+        "columns": ["user", "entity"],
+        "data": [{
+            "graph": {
+                "nodes": [{
+                    "id": "1",
+                    "labels": ["Localização"],
+                    "fraud": true,
+                    "properties": {
+                        "Nome": "Cliníca Brasil",
+                        "Tipo": "Cliníca",
+                        "Endereço": "Avenida Brasil, 475 - Santa Efigência - Belo Horizonte - MG",
+                        "Latitude": -19.9227061,
+                        "Longitude": -43.9232844
+
+                    }
+                }, {
+                    "id": "3",
+                    "labels": ["Prestador"],
+                    "properties": {
+                        "Nome": "Dr. Roberto Alves",
+                        "CNPJ": "97.096.539/0001-28"
+                    }
+                }, {
+                    "id": "4",
+                    "labels": ["Prestador"],
+                    "fraud": true,
+                    "properties": {
+                        "Nome": "Dr. Faria Lima",
+                        "CNPJ": "60.064.586/0001-80"
+                    }
+                }, {
+                    "id": "14",
+                    "labels": ["Advogado"],
+                    "fraud": true,
+                    "properties": {
+                        "name": "Phoenix Wright"
+                    }
+                }, {
+                    "id": "15",
+                    "labels": ["Advogado"],
+                    "fraud": true,
+                    "properties": {
+                        "name": "Harvey Specter"
+                    }
+                }],
+                "relationships": [{
+                    "id": "1",
+                    "type": "LOCALIZADO_EM",
+                    "startNode": "3",
+                    "endNode": "1",
+                    "properties": {
+                        "Desde": "04/03/2006"
+                    }
+                }, {
+                    "id": "3",
+                    "type": "LOCALIZADO_EM",
+                    "startNode": "4",
+                    "endNode": "1",
+                    "properties": {
+                        "Desde": "11/05/1998"
+                    }
+                }, {
+                    "id": "13",
+                    "type": "REPRESENTADO_POR",
+                    "startNode": "3",
+                    "endNode": "14",
+                    "properties": {
+                        "Desde": "11/05/1998",
+                        "Última ação": "05/04/2018",
+                        "Número de causas: ": 14
+                    }
+                }, {
+                    "id": "13",
+                    "type": "REPRESENTADO_POR",
+                    "startNode": "3",
+                    "endNode": "15",
+                    "properties": {
+                        "Desde": "11/05/1998",
+                        "Última ação": "05/04/2018",
+                        "Número de causas: ": 14
+                    }
+                }]
+            }
+        }]
+    }],
+    "errors": []
+}

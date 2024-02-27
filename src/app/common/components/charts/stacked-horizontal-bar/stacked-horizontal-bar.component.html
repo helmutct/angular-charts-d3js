@@ -1,0 +1,20 @@
+<div class="row stacked-horizontal-bar-chart">
+  <div class="col-md-12">
+    <ngx-charts-bar-horizontal-stacked class="chart-container" 
+    [view]="view" 
+    [scheme]="colorScheme" 
+    [results]="multi" 
+    [gradient]="gradient" 
+    [xAxis]="showXAxis" 
+    [yAxis]="showYAxis" 
+    [legend]="showLegend" 
+    [legendTitle]="legendTitle" 
+    [showXAxisLabel]="showXAxisLabel" 
+    [showYAxisLabel]="showYAxisLabel" 
+    [xAxisLabel]="xAxisLabel" 
+    [yAxisLabel]="yAxisLabel" 
+    (select)="onSelect($event)" 
+    [barPadding]="barPadding">
+    </ngx-charts-bar-horizontal-stacked>
+  </div>
+</div>

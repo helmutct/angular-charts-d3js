@@ -1,0 +1,127 @@
+@import "../../../common/styles/variables";
+
+#faceid {
+    .div-alert-text-font-size{
+        font-size: larger;
+    }
+    .div-another-photos{
+        border-bottom: 5px solid #0e357bdb;
+    }
+    .div-another-photos-imgs{
+        width: 12rem; 
+        height: 14rem; 
+    }
+    .div-another-photos-imgs:hover{
+        border-radius: 1rem;
+        transform-origin: center center;
+        animation: scale 100ms ease-in-out forwards;
+        z-index: +5;
+      }
+      @keyframes scale {
+        to {
+          transform: scale(1.4);
+        }
+    }     
+    .div-main-photos-imgs{
+        
+        place-items: center;
+
+        #suspect{
+            background: rgb(232 15 33 / 80%);
+            border-color: rgba(191, 23, 37, 0.8);
+            
+        }
+
+        #original-photo{
+            background: rgba(31, 236, 31, 0.8);
+            border-color: rgba(45, 146, 45, 0.8);
+        }
+
+        img{
+            height: 45vh;
+            position: relative;
+            padding: 8px;
+        }
+    }
+    .color-white {
+        color: $default-color;
+        font-weight: bold;
+    }
+    .answer{
+        margin: 1px;
+    }
+    .red-alert{
+        font-family: monospace;
+        background: rgb(232 15 33 / 100%);
+        color:$default-color;
+        font-weight: 400;
+        border-radius: 1rem;
+    }
+    .card-error{
+        .patient-answer{
+            background: $danger-ligther-color;
+            border-color: $danger-ligther-color;
+            color: #fff;
+        }
+        .card-header {
+            background-color: $danger-ligther-color;
+        }
+        .card-footer{
+            background-color: $danger-ligther-color;
+        }
+    }
+    .card-acerto{
+        .patient-answer{
+            background: $success-color;
+            border-color: $success-color;
+            color: #fff;
+        }
+        .card-header {
+            background-color: $success-color;
+        }
+        .card-footer{
+            background-color: $success-color;
+        }
+    }
+    
+    .div-button-confirm{
+        background-color: $body-bg-gradient-color-1;
+        margin-bottom: 2rem;
+    }
+   
+    .btn{
+        border-radius: 1rem;
+    }
+    #button-green{
+        text-align: -webkit-right;
+    }  
+
+    #suspect:hover {
+        border-radius: 1rem;
+        transform-origin: center left;
+        animation: scale 100ms ease-in-out forwards;
+        z-index: +1;
+        background: rgb(232 15 33 / 100%);
+        border-color: rgba(191, 23, 37, 0.8);
+
+        @keyframes scale {
+            to {
+              transform: scale(1.5);
+            }
+          } 
+      }
+      
+    #original-photo:hover{
+        border-radius: 1rem;
+        transform-origin: center right;
+        animation: scale 100ms ease-in-out forwards;
+        z-index: +1;
+        background: rgb(31 236 31 / 100%);
+        border-color: rgba(45, 146, 45, 0.8);
+      }
+      @keyframes scale {
+        to {
+          transform: scale(1.5);
+        }
+      }
+}

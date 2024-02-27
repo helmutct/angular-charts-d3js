@@ -1,0 +1,63 @@
+<div [@routerTransition] id="facial-customer-view-data">
+  <div widget class="card">
+    <div class="card-header text-center">
+      <h5>Jeffrey Dean Morgan</h5>
+    </div>
+    <form (ngSubmit)="photoUploaded()">
+      <div class="row pt-4 justify-content-center text-center div-main-photos-imgs">
+        <div class="col-xl-4 col-md-5 col-sm-12 text-center p-2">
+          <div class="row">
+            <div class="col-12">
+              <cd-image-uploader (onImageChanged)="onImageChanged($event)" (onImageError)="onImageError($event)">
+              </cd-image-uploader>
+              <h6 class="text-center">Tire a Foto do Beneficiario</h6>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-8">
+          <div class="form-group">
+            <label>Selecione o tipo de procedimento:</label>
+            <div class="input-group">
+              <select id="select-providers" class="form-control checking-field text-center" required>
+                <option [ngValue]="null"> -- selecione um Procedimento --
+                </option>
+                <option value="Consulta">
+                  Consulta
+                </option>
+                <option value="Internacao">
+                  Internação
+                </option>
+                <option value="Procedimento">
+                  Procedimento
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 pb-4" *ngIf="!alert">
+          <button type="submit" class="btn btn-main">
+            <i class="fas fa-check-double"></i> Confirmar Procedimento
+          </button>
+        </div>
+      </div>
+    </form>
+    <div class="row p-4 " *ngIf="alert" id="row-question">
+      <div class="col-12 pb-1">
+        <div class="card text-center" id="questionToMake">
+          <div class="card-header">
+            Pergunta de Confirmação
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{questiontoMake}}</h5>
+            <span class="btn btn-info answer" (click)="question(choice1 , questiontoMake)">{{choice1}}</span>
+            <span class="btn btn-info answer" (click)="question(choice2 , questiontoMake)">{{choice2}}</span>
+            <span class="btn btn-info answer" (click)="question(choice3 , questiontoMake)">{{choice3}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

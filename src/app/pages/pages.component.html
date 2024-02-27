@@ -1,0 +1,31 @@
+<zr-navbar></zr-navbar>
+<div class="container-fluid">         
+    <div class="row"> 
+        <zr-menu></zr-menu>
+        <!--<zr-sidebar></zr-sidebar>-->
+        <div class="main-wrapper"  [ngClass]="{'menu-collapsed': isMenuCollapsed}"> 
+            <div class="zr-overlay" *ngIf="!isMenuCollapsed" (click)="hideMenu()"></div>
+
+            <div class="main">
+                <zr-breadcrumb></zr-breadcrumb>
+                <router-outlet></router-outlet>
+            </div> 
+
+          
+            <footer class="footer clearfix">
+                <div class="footer-main pull-left  clearfix">
+                    <div class="copyright pull-left">&copy; <a class="font-weight-bold" href="https://www.techrocks.com.br" target="_blank">Tech Rocks!</a> 2020</div>
+                    <ul class="share clearfix pull-left">
+                        <li><a href="https://www.facebook.com/techrocks/" target="_blank"><i class="socicon socicon-facebook transition"></i></a></li>
+                        <li><a href="https://twitter.com/techrocks_br" target="_blank"><i class="socicon socicon-twitter transition"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/techrocksbr/" target="_blank"><i class="socicon socicon-linkedin transition"></i></a></li>
+                    </ul>
+                </div>
+                
+            </footer>
+
+            <zr-back-top position="200"></zr-back-top>
+
+        </div>
+    </div>
+</div>

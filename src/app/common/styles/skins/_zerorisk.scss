@@ -1,0 +1,23 @@
+/**** Colors (recommended use HEX colors) ****/ 
+$main-color: #022245; 
+$default-color:#fff; 
+$dark-color: #000;
+
+$body-bg-gradient-color-1: #1e5799;
+$body-bg-gradient-color-2:  #a5c9e5;
+
+$sidebar-bg-color:#0D3D70;
+$sidebar-item-active-bg-color: #36689E;// #0099cc;
+
+
+$primary-color: #024a88;
+$success-color: #2d922d;
+$info-color: #248dad;
+$warning-color: #f79a17;
+$danger-color: #bf1725;
+$danger-ligther-color: #ff091dd4;
+/* begin - this variables serv as a workaround to a bug in awesome-bootstrap-checkbox */
+$form-check-input-gutter: 1.25rem !default;
+$input-disabled-bg: #DCDCDC;
+$form-feedback-invalid-color: theme-color("danger") !default;
+/* end - this variables serv as a workaround to a bug in awesome-bootstrap-checkbox */

@@ -1,0 +1,20 @@
+<div [@routerTransition]>
+    <div class="row" id="fist-row">
+        <div class="col-12">
+            <zr-historic-filters (onApplyFilters)="onApplyFilters($event)"></zr-historic-filters>
+        </div>
+    </div>
+    <div class="spin-outer" id="internal-preloader">
+        <div class="spin-container">
+            <div class="spin-inner">
+                <div class="spin-cube-grid">
+                    <img src="assets/img/logo/loader.gif" alt="user-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="list-products">
+        <div class="row">
+        </div>
+    </div>
+</div>

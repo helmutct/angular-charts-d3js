@@ -1,0 +1,21 @@
+@import "../../../common/styles/variables";
+#facial-customer{
+    .fa-id-card{
+        font-size: 180px;
+        color: $body-bg-gradient-color-1;
+    }
+    #provider-name{
+        text-align-last: center;
+    }
+    #denie-div{
+        background: $danger-ligther-color;
+        border-radius: 0.5rem;
+        color: $default-color;
+    }
+    #sucess-div{
+        background: $success-color;
+        border-radius: 0.5rem;
+        color: $default-color;
+    }
+}
+

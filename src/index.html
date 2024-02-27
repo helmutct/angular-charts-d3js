@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Zero Risk</title>
+    <meta name="description" content="Admin template based on Angular 4 and Bootstrap 4">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="/assets/icons/favicon/safari-pinned-tab.svg" color="#313096">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <style type="text/css">
+        .spin-outer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .spin-container {
+            height: 100%;
+            width: 100%;
+            display: table;
+        }
+
+        .spin-inner {
+            vertical-align: middle;
+            height: 100%;
+            display: table-cell;
+        }
+
+        .spin-cube-grid {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+        }
+    </style>
+    <zr-root></zr-root>
+
+    <div class="spin-outer" id="preloader">
+        <div class="spin-container">
+            <div class="spin-inner">
+                <div class="spin-cube-grid">
+                    <img src="assets/img/logo/loader.gif" alt="user-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script data-pace-options='{ "target": ".main-wrapper", "ghostTime": 1000 }'></script>
+    <script src="https://cdn.ckeditor.com/4.6.1/full-all/ckeditor.js"></script>
+    <!-- relay bootstrap events to angular - start -->
+    <script>
+        function eventRelay(bs_event) {
+            $('body').on(bs_event, function ($event) {
+                const customEvent = document.createEvent('Event');
+                customEvent.initEvent(bs_event, true, true);
+                let target_id = '#' + $event.target.id;
+                $(target_id)[0].dispatchEvent(customEvent);
+            });
+        }
+    </script>
+    <!-- relay bootstrap events to angular - end -->
+</body>
+
+</html>

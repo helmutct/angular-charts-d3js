@@ -1,0 +1,74 @@
+<div [@routerTransition]>
+    <div class="container" id="facial">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="input-name">Periodo:</label>
+                    <input id="input-name" type="month" class="form-control checking-field" maxlength="8" required
+                        [ngModel]="month" (ngModelChange)="applyFilterr($event)" name="monthSelect"
+                        #subscriptionMonth="ngModel" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="card small-info-box">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="fas fa-chart-pie"></i>
+                        </span>
+                        <div class="media-body text-right">
+                            <h6 class="media-heading no-margin">TOTAL EVENTOS - {{totalEventos}}</h6>
+                            <span class="media-heading no-margin">ALERTAS {{totalAlertas}} -
+                                {{percentagem.toFixed(2)}}%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card small-info-box">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="fas fa-user-clock"></i>
+                        </span>
+                        <div class="media-body text-right">
+                            <h6 class="media-heading no-margin">ANALISES PENDENTES</h6>
+                            <span>{{pendente}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-lg-6 col-sm-12 bottom-30">
+                <div widget class="card">
+                    <div class="card-header text-center">
+                        <span>EVENTOS</span>
+                    </div>
+                    <div class="card-body widget-body">
+                        <zr-stacked-vertical-bar [multi]="eventos" [xAxisLabel]="''" [yAxisLabel]="'Qtd. eventos'"
+                            [height]="400"></zr-stacked-vertical-bar>
+                    </div>
+                    <div class="card-footer text-muted text-right">
+                        <a routerLink="/dashboard/esquemas">Listar todos</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-12 bottom-30">
+                <div widget class="card">
+                    <div class="card-header text-center">
+                        <span>ANALISES</span>
+                    </div>
+                    <div class="card-body widget-body">
+                        <zr-vertical-bar [data]="auditorias" [xAxisLabel]="''" [yAxisLabel]="'Qtd. análise'"
+                            [height]="400"></zr-vertical-bar>
+                    </div>
+                    <div class="card-footer text-muted text-right">
+                        <a routerLink="/facial/analises">Listar todos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

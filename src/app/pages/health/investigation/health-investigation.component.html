@@ -1,0 +1,43 @@
+<div [@routerTransition]>
+    <div class="container">
+        <div class="row">
+            <h1>Procedimentos</h1>
+        </div>
+        <div class="row">
+            <table class="table table-hover table-investigation">
+                <thead>
+                    <tr>
+                        <th class="text-center">Pontuação</th>
+                        <th class="text-center">Risco</th>
+                        <th class="text-center">Identificação</th>
+                        <th>Médico</th>
+                        <th>Autorização solicitada</th>
+                        <!-- tipo seguro de autos: acidente, roubo, furto -->
+                        <!-- tipo plano de saúde: procedimentos, exames ou cirurgias -->
+                        <th>Tipo</th>
+                        <th>Possui prótese</th>
+                        <th>Valor</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="background-red font-weight-bold text-center color-white">897</td>
+                        <td class="font-weight-bold text-center">Alto</td>
+                        <td class="text-center">00834</td>
+                        <td>dr. Roberto Alves</td>
+                        <td>29/05/2018</td>
+                        <td>Prescrição</td>
+                        <td>Não</td>
+                        <td>R$134.743,00</td>
+                        <td>
+                            <a routerLink="/saude/investigacoes/alertas">
+                                <i class="fas fa-search btn-search"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

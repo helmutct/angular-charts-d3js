@@ -1,0 +1,24 @@
+<div class="container" [style.height.px]="height">
+  <div class="row h-100">
+      <div class="col-md-12 h-100">
+    <ngx-charts-bar-vertical-stacked class="chart-container" 
+    [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [animations]="animations"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [legendTitle]="legendTitle"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [barPadding]="barPadding"
+      [showDataLabel]="showDataLabel"
+      (select)="onSelect($event)">
+    </ngx-charts-bar-vertical-stacked>    
+  </div>
+</div>
+</div>

@@ -1,0 +1,33 @@
+@import "../../../common/styles/variables";
+
+#facial-customer-view-data {
+    .div-another-photos-imgs:hover{
+        border-radius: 1rem;
+        transform-origin: center center;
+        animation: scale 100ms ease-in-out forwards;
+        z-index: +5;
+      }
+      @keyframes scale {
+        to {
+          transform: scale(1.4);
+        }
+    }     
+    .answer{
+        margin: 1px;
+    }
+    #row-question{
+        .card-header {
+            background-color: $body-bg-gradient-color-1;
+        }
+        .card-footer{
+            background-color: $body-bg-gradient-color-1;
+        }
+    }
+    .btn{
+        border-radius: 1rem;
+    }
+    select{
+        border-radius: 0.5rem;
+        text-align-last: center;
+    }
+}

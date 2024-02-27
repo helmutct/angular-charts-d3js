@@ -1,0 +1,103 @@
+{
+    "results": [{
+        "columns": ["user", "entity"],
+        "data": [{
+            "graph": {
+                "nodes": [{
+                    "id": "1",
+                    "labels": ["Localização"],
+                    "fraud": true,
+                    "properties": {
+                        "Nome": "Cliníca Brasil",
+                        "Tipo": "Cliníca",
+                        "Endereço": "Avenida Brasil, 475 - Santa Efigência - Belo Horizonte - MG",
+                        "Latitude": -19.9227061,
+                        "Longitude": -43.9232844
+
+                    }
+                }, {
+                    "id": "2",
+                    "labels": ["Localização"],
+                    "properties": {
+                        "Nome": "Consultório Abreu",
+                        "Tipo": "Consultório",
+                        "Endereço": "Avenida 1º de Maio, 987 - Barreiro - Belo Horizonte - MG",
+                        "Latitude": -19.9258326,
+                        "Longitude": -43.9171738
+                    }
+                }, {
+                    "id": "3",
+                    "labels": ["Prestador"],
+                    "properties": {
+                        "Nome": "Dr. Roberto Alves",
+                        "CNPJ": "97.096.539/0001-28"
+                    }
+                }, {
+                    "id": "4",
+                    "labels": ["Prestador"],
+                    "fraud": true,
+                    "properties": {
+                        "Nome": "Dr. Faria Lima",
+                        "CNPJ": "60.064.586/0001-80"
+                    }
+                }, {
+                    "id": "9",
+                    "labels": ["Tratamento"],
+                    "properties": {
+                        "name": "Visita externa ao paciente"
+                    }
+                }, {
+                    "id": "13",
+                    "labels": ["Tratamento"],
+                    "properties": {
+                        "name": "Visita ao departamento de emergência"
+                    }
+                }],
+                "relationships": [{
+                    "id": "1",
+                    "type": "LOCALIZADO_EM",
+                    "startNode": "3",
+                    "endNode": "1",
+                    "properties": {
+                        "Desde": "04/03/2006"
+                    }
+                }, {
+                    "id": "2",
+                    "type": "LOCALIZADO_EM",
+                    "startNode": "3",
+                    "endNode": "2",
+                    "properties": {
+                        "Desde": "27/08/2017"
+                    }
+                }, {
+                    "id": "3",
+                    "type": "LOCALIZADO_EM",
+                    "startNode": "4",
+                    "endNode": "1",
+                    "properties": {
+                        "Desde": "11/05/1998"
+                    }
+                }, {
+                    "id": "4",
+                    "type": "COBROU_POR",
+                    "startNode": "4",
+                    "endNode": "13",
+                    "properties": {
+                        "Valor médio": 1473.58,
+                        "Nº médio de prescrições": 142
+                    }
+                }, {
+                    "id": "10",
+                    "type": "COBROU_POR",
+                    "startNode": "3",
+                    "endNode": "9",
+                    "properties": {
+                        "Valor médio": 1473.58,
+                        "Nº médio de prescrições": 142
+                    }
+                }]
+            }
+        }]
+    }],
+    "errors": []
+}
